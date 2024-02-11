@@ -2,11 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path')
 const mongoose = require('mongoose');
-// const seedDb = require('./seed');
 const quotesApis = require('./apis/quote');
 const dotenv = require('dotenv').config();
-
-// seedDb()
 
 // middlewares
 app.use(express.json());
