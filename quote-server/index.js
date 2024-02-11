@@ -3,6 +3,7 @@ const app = express();
 const path = require('path')
 const mongoose = require('mongoose');
 const quotesApis = require('./apis/quote');
+const cors = require('cors')
 const dotenv = require('dotenv').config();
 
 // middlewares
@@ -10,6 +11,9 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname,'public')))
 
+app.use(cors({
+    origin: ["http://localhost:5173"],
+  }))
 
 
 // routes

@@ -1,15 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, Fragment } from 'react'
+import {Routes, Route} from 'react-router-dom'
 import './App.css'
+import Navbar from './Components/Global/Navbar'
+import Allquotes from './Components/Pages/Allquotes'
+import Newquote from './Components/Pages/Newquote'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <h1 className='text-center text-red-400 text-lg font-extrabold'>Helo Bhiya I am tailwind CSS</h1>
-    </>
+    <Fragment>
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Allquotes />} />
+        <Route path='/new' element={<Newquote />} />
+      </Routes>
+    </Fragment>
   )
 }
 
