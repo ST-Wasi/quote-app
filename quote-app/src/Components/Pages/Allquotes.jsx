@@ -18,7 +18,7 @@ function Allquotes() {
         <div>
             <h1>All Quote Page</h1>
             <ul>
-            {quotes && quotes.map((item, index) => (<Quote quote={item.quote} author={item.author} key={item._id} />))}
+            {quotes && quotes.map((item, index) => (<Quote quote={item.quote} author={item.author} key={index} id={item._id} />))}
             </ul>
         </div>
     )
